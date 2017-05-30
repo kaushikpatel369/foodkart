@@ -1,0 +1,45 @@
+<ion-view view-title="Foodcart" style="padding-bottom:2px; background-size: cover;">
+	
+		<ion-nav-buttons side="right">
+			<a href="#/mycart" class="button button-clear icon ion-android-cart"></a>		
+		</ion-nav-buttons>
+	
+	<ion-content style="background: url('img/home3.jpg'); background-size: 100% 100% !important;">
+
+			<!--Slide Box -->
+			<ion-slide-box style="align:center;" class="photo-slider"
+                       show-pager="true"
+                       slide-interval="3000"
+                       disable-scroll="false"
+                       auto-play="true"
+					   does-continue="true">
+					<ion-slide ng-repeat="slide in slides" ng-click="goToBannerLink(slide)">
+						<img class="slide-photo" ng-src="img/{{slide}}">
+					</ion-slide>
+			</ion-slide-box>
+				
+			<div class="spacer" style="height: 50px;"></div>
+				
+			<div class="row welcome-row">
+					<div class="col welcome-col">
+					<div class="animated flipInX">
+						<button translate="homeview.discounts" class="button  button-block button-energized" style="color:black; font-size:17px; font-weight:bold; font-family:Courier New" nav-direction="forward" ng-click="getSpecial()">
+							Discounts
+						</button> 
+					</div>
+					</div>		
+            </div>
+			<div class="row">
+				<div class="col welcome-col">
+					<div class="animated flipInX">
+					<button translate="homeview.browse_categories" class="button button-assertive button-block" style="font-size:17px; font-weight:bold; font-family:Courier New" nav-direction="forward" ng-click="category()">
+						Browse by categories
+					</button>
+					</div>
+				</div>
+			</div>
+			
+	</ion-content>		
+
+				
+</ion-view>

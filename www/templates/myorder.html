@@ -1,0 +1,66 @@
+<ion-view>
+<ion-nav-title>Order Details</ion-nav-title>
+
+<ion-content>
+
+      <ion-list>
+        <div ng-repeat="group in groups">
+          <ion-item class="item-stable"
+                    ng-click="toggleGroup(group)"
+                    ng-class="{active: isGroupShown(group)}">
+              <i class="icon" ng-class="isGroupShown(group) ? 'ion-minus' : 'ion-plus'"></i>
+            &nbsp;
+            Order No. {{$index+1}}
+          </ion-item>
+          <ion-item class="item-accordion"  ng-show="isGroupShown(group)">
+                   
+			<div class="panel">
+				<div class="panel-body1">
+					<h3 style="color:#fff8d6; font-family:Lucida Sans Unicode; text-decoration: underline;">Contact Details</h3>
+					
+					<div class="row" style="color:#e8fff5; font-size:20px; line-height:30px; font-family:Trebuchet MS">
+					Name : {{group.name}}			<br>
+					C/O : {{group.coname}}			<br>
+					Mobile : {{group.mobile}}		<br>
+					Address : {{group.address}}		<br>
+					Pin : {{group.pin}}				<br>
+					</div>
+				
+					<h3 style="color:#fff8d6; font-family:Lucida Sans Unicode; text-decoration: underline;">Item Details</h3>
+					
+					<!--<div class="row" ng-repeat="cart1 in group.cart track by $index" style="color:#e8fff5; font-size:20px; line-height:30px; font-family:Trebuchet MS">
+						Item&nbsp{{$index+1}} : {{cart1.name}}  <br>&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp quantity: {{cart1.quantity}}
+					</div>-->
+					<div class="list" ng-repeat="cart1 in group.cart track by $index">
+						 <div class="item item-thumbnail-right" style="border-bottom:none;border-top:none;padding-bottom:0px;padding-top:0px">
+									<img ng-src="{{cart1.img}}" style="height:50px;width:50px">
+									<div class="row">
+										<div class="col col-100" style="padding-top:0px;padding-left:0px;color:#e8fff5; ">
+											Item&nbsp{{$index+1}} : {{cart1.name}}  <br>&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp quantity: {{cart1.quantity}}	
+										</div>
+									</div>
+						 </div>
+					</div>
+					<br>
+					<div class="row" style="color:#e8fff5; font-size:20px; line-height:30px; font-family:Trebuchet MS">
+						Payment mode : {{group.paymentmode}}
+					</div>
+					<br>
+					<div class="row" style="color:white; font-size:28px; font-family:Trebuchet MS">
+						Total&nbsp ₹&nbsp{{group.total}}
+					</div>
+<!--				
+					<div>
+					<button class="button button-balanced button-block margin-button" nav-direction="forward" ng-click="back()"> Finish </button>
+					</div>
+-->
+				</div>
+			</div>
+				   
+          </ion-item>
+        </div>
+      </ion-list>
+
+</ion-content>
+
+</ion-view>

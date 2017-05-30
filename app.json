@@ -1,0 +1,7 @@
+{
+"name": "food kart",
+"description": "A food kart app developed by we three",
+"repository":"https://github.com/kaushikpatel369/foodkart.git",
+"logo":"http://node-js-sample.herokuapp.com/node.svg",
+"keywords": ["ionic", "express", "static"]
+}

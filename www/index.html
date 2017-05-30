@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8"><meta name="viewport" content="initial-scale=1, maximum-scale=1, user-scalable=no,width=device-width">
+		<title></title>
+		<link rel="manifest" href="manifest.json">
+		<link href="lib/ionic/css/ionic.css" rel="stylesheet">
+		<link href="css/style.css" rel="stylesheet">
+		<link href="css/animate.css" rel="stylesheet">
+		
+		<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+		<script src="lib/ionic/js/ionic.bundle.js"></script>
+		<script src="lib/filepicker-js/filepicker.js"></script>
+		<script src="lib/angular-filepicker/dist/angular_filepicker.js"></script>
+
+		<script src="cordova.js"></script>
+		<script src="js/app.js"></script>
+		<script src="js/constant.js"></script>
+		<script src="js/services.js"></script>
+		<script src="js/server.js"></script>
+		
+		<script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.2.0rc1/angular-route.min.js"></script>
+	</head>
+	
+	<body ng-app="starter">
+		<ion-side-menus enable-menu-with-back-views="true">
+		<ion-side-menu-content>
+				<ion-nav-bar class="bar-royal">
+						<ion-nav-buttons side="left">
+							<button menu-toggle="left" class="button button-icon button-clear ion-navicon"></button>
+						</ion-nav-buttons>
+						<ion-nav-buttons side="right">
+<!--							<a href="#/adduser" class="button button-balanced">Add User</a>		-->		
+						</ion-nav-buttons>					
+				</ion-nav-bar>
+				<ion-nav-view></ion-nav-view>
+		</ion-side-menu-content>
+			
+		<ion-side-menu side="left"  style="background: url('img/bg1.jpg'); background-size: 100% 100% !important;">
+				<ion-header-bar class="bar-royal">
+					<h1 class="title"><i class="icon ion-home"> </i>Menu</h1>
+				</ion-header-bar>
+				<ion-content>
+					<ion-list ng-controller="indexCtrl">
+<!--						<ion-item menu-close href="#/list">User Listing</ion-item>					-->
+					
+						<ion-item menu-close ng-click="add()">Admin Login</ion-item>
+						<ion-item menu-close ng-click="gohome()">Home</ion-item>
+						<ion-item menu-close ng-click="myac()">My Account</ion-item>
+						<ion-item menu-close ng-click="myorder()">My Orders</ion-item>
+					</ion-list>
+						
+					<!--<ion-item menu-close ng-click="add()"><i class="icon ion-android-happy">  </i>Admin Login</ion-item>
+						<ion-item menu-close ng-click="myac()"><i class="icon ion-android-person">  </i>My Account</ion-item>-->
+						
+					<ion-list ng-controller="logoutCtrl">
+						<ion-item menu-close ng-click="logout()">Logout</ion-item>
+					</ion-list>
+					
+					
+				</ion-content>
+		</ion-side-menu>
+		</ion-side-menus>
+		
+		
+	</body>
+</html>

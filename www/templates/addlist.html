@@ -1,0 +1,79 @@
+<ion-view>
+<ion-nav-title>Foodcart</ion-nav-title>
+		
+		<ion-nav-buttons side="right">
+			<a href="#/adduser" class="button button-clear icon ion-plus-circled"></a>
+		</ion-nav-buttons>
+<!--		<ion-nav-buttons side="left">
+					
+		</ion-nav-buttons>	
+-->
+			<ion-content class="padding" style="background: url('img/home3.jpg'); background-size: 100% 100% !important;">
+						<div class="list" ng-repeat="user in contactlist" style="border-bottom:0px solid black;border-top:0px solid black">
+
+						   <div class="item item-thumbnail-left">
+							  <img ng-src="{{user.img}}">
+							  <div class="row">
+								<div class="col col-80" style="padding-top:0px;padding-left:0px;">
+									<span style="font-size: 15px;color: #0b8258;">{{user.value}}</span><br>
+									<span style="font-size: 15px;color: #8d9118; text-align:right">{{user.name}}</span><br>
+									<span style="font-size: 12px;color: #211CB6;">{{user.price}}</span><br>
+									<span style="font-size: 12px;color: #8e1325;word-break: keep-all; white-space: normal; padding-top:0px">{{user.desc}}</span>
+								</div>
+								
+								  <div class="col col-offset-10 col-20" style="padding-top:0px;padding-left:0px; text-align:right">
+									<div class="icon-bar">
+										<a href="#/edit/{{user._id}}" class="button button-icon button-assertive ion-edit" style="color:#07af74"></a><br>
+										<a href="" ng-click="delete(user._id)" class="button button-icon button-positive ion-trash-a" style="color:#a81736"></a>	
+									</div>
+								  </div>
+								 
+						      </div>
+						   </div>
+						</div>
+						<!--<ion-list show-reorder="reordering" ng-repeat="user in contactlist" >
+							
+							<div class="row">
+								<div class="col col-20" style="padding:0px;background-color:red">
+									<img ng-src="" style="width:200%;height:100%">
+								</div>
+								<div class="col col-offset-20 col-67" >
+									<h2 style="font-size: 22px;padding-bottom: 2px;color: #0b8258;">{{user.value}}</h2>
+									<h2 style="font-size: 20px;padding-bottom: 2px;color: #8d9118;">{{user.name}}</h2>
+									<h4 style="font-size: 20px;padding-bottom: 2px;color: #211CB6;">{{user.price}}</h4>
+									<p style="font-size: 17px;padding-bottom: 2px;color: #8e1325;word-break: keep-all; white-space: normal;">{{user.desc}}</p>
+								</div>
+								
+									<div class="icon-bar">
+										<a href="#/edit/{{user._id}}" class="button button-icon button-assertive ion-edit" style="color:#07af74"></a><br>
+										<a href="" ng-click="delete(user._id)" class="button button-icon button-positive ion-trash-a" style="color:#a81736"></a>	
+									</div>
+								
+							</div>
+						</ion-list>-->
+						<br><br><br>
+						
+						
+			</ion-content>
+			
+		<ion-footer-bar class="bar-royal">
+		  
+		  <a class="tab-item" ng-click="loadgrocery()">
+			<i class="icon ion-bag"></i>
+		  </a>
+		  <a class="tab-item" ng-click="loadfashion()" >
+			<i class="icon ion-tshirt"></i>
+			Favorites
+		  </a>
+		  <a class="tab-item" ng-click="loadelectronics()">
+			<i class="icon ion-ios-monitor"></i>
+			Settings
+		  </a>
+		  <a class="tab-item" ng-click="loadall()">
+			<i class="icon ion-more"></i>
+			Test
+		  </a>
+		
+		
+	</ion-footer-bar>
+</ion-view>

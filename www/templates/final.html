@@ -1,0 +1,50 @@
+<ion-view title="Shipping Details">
+	<ion-content style="background: url('img/home3.jpg'); background-size: 100% 100% !important;">
+		
+			
+			
+			<div class="panel">
+				<div class="panel-body1">
+					<h3 style="color:#fff8d6; font-family:Lucida Sans Unicode; text-decoration: underline;">Contact Details</h3>
+					
+					<div class="row" style="color:#e8fff5; font-size:20px; line-height:30px; font-family:Trebuchet MS">
+					Name : {{customer1.name}}			<br>
+					C/O : {{customer1.coname}}			<br>
+					Mobile : {{customer1.mobile}}		<br>
+					Address : {{customer1.address}}		<br>
+					Pin : {{customer1.pin}}				<br>
+					</div>
+				
+					<h3 style="color:#fff8d6; font-family:Lucida Sans Unicode; text-decoration: underline;">Item Details</h3>
+					
+					<!--<div class="row" ng-repeat="cart1 in customer1.cart track by $index" style="color:#e8fff5; font-size:20px; line-height:30px; font-family:Trebuchet MS">
+						Item&nbsp{{$index+1}} : {{cart1.name}}  <br>&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp quantity: {{cart1.quantity}}
+					</div>-->
+					<div class="list" ng-repeat="cart1 in customer1.cart track by $index">
+						 <div class="item item-thumbnail-right" style="border-bottom:none;border-top:none;padding-bottom:0px;padding-top:0px">
+									<img ng-src="{{cart1.img}}" style="height:50px;width:50px">
+									<div class="row">
+										<div class="col col-100" style="padding-top:0px;padding-left:0px;color:#e8fff5; ">
+											Item&nbsp{{$index+1}} : {{cart1.name}}  <br>&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp quantity: {{cart1.quantity}}	
+										</div>
+									</div>
+						 </div>
+					</div>
+					
+					<br>
+					<div class="row" style="color:#e8fff5; font-size:20px; line-height:30px; font-family:Trebuchet MS">
+						Payment mode : {{customer1.paymentmode}}
+					</div>
+					<br>
+					<div class="row" style="color:white; font-size:28px; font-family:Trebuchet MS">
+						Total&nbsp ₹&nbsp{{total}}
+					</div>
+					
+					<div>
+					<button class="button button-balanced button-block margin-button" nav-direction="forward" ng-click="back()"> Finish </button>
+					</div>
+				</div>
+			</div>
+		
+	</ion-content>
+</ion-view>

@@ -1,0 +1,25 @@
+<ion-view title="Payment Method" style="background: url(img/home3.jpg); background-size: 100% 100% !important;">
+	<ion-content>
+		
+			<ion-list radio-group [(ngModel)]="relationship">
+				  <ion-item style="background:transparent">
+					<ion-radio value="cod" ng-model="payment.mod">Cash On Delivery</ion-radio>
+					<ion-radio value="net" ng-model="payment.mod" >Net Banking</ion-radio>
+					<ion-radio value="dca" ng-model="payment.mod">Debit / Credit / ATM Card</ion-radio>
+					<ion-radio value="paytm" ng-model="payment.mod">Paytm</ion-radio>
+				  </ion-item>
+			</ion-list>
+			
+			<div class="panel">
+				<div class="panel-body cart-summary">
+					<h3 style="color:white">Order Summary</h3>
+					<div class="row" >
+						<div class="col col-67"><h4 style="color:white">Total Amount :</h4></div>
+						<div class="col col-33"><h4 style="color:white">₹&nbsp&nbsp{{total}}</h4></div>
+					</div>
+					<button class="button button-balanced button-block button-custom margin-button" nav-direction="forward" ng-click="pay(payment)"> Continue </button>
+				</div>
+			</div>
+		
+	</ion-content>
+</ion-view>

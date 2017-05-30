@@ -1,0 +1,47 @@
+      
+	<ion-view title="Login" id="page2" style="background: url(img/bg5.jpg); background-size: 100% 100% !important;">
+	
+		<ion-content padding="true" class="padding has-header">
+		
+		
+				<div class = "row" align="center">
+				   <div class = "col">
+					   <div class="animated slideInDown">
+							<img src="img\logo1.png" height="100px" width="70px">
+						</div>
+				   </div>
+				</div>
+		
+				<div class="spacer" style="height: 0px;"></div>
+					
+				<div class="list list-inset" style="background:transparent">
+					<div class="item item-input" style="background:transparent">
+						<span><i class="icon ion-android-phone-portrait">&nbsp </i>Mobile</span>&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp
+						<input type="text" ng-model="user.mobile"/>
+					</div>
+					<div class="item item-input" style="background:transparent">
+						<span><i class="icon ion-unlocked"> </i>Password</span>&nbsp&nbsp&nbsp&nbsp
+						<input type="password" ng-model="user.pwd"/>
+					</div>
+					
+						<div class="animated flipInX">
+							<button class="button button-block button-positive" ng-click="loginuser(user)">Log In</button>
+						</div>
+					
+					<a ui-sref="register" ng-click="sLogin()" id="login-button2" style="text-shadow: 1px 1px black; font-size:20px" class="button button-balanced button-block button-clear">Or create an account</a>
+				</div>
+				
+				
+				
+				<div class="spacer" style="height: 0px;"></div>
+				<p style="text-align:center">Want to login with social account?</p>
+				
+				
+						<div class="col"> <a class=" button-royal button button-full" ng-click="LoginwithFacebook()"><span class="icon ion-social-facebook">&nbsp&nbsp </span>Login with facebook</a> </div>
+						<!--<div class="col"> <a class="button-assertive button button-block" ng-click="googleSignIn()"><i class="icon ion-social-google"></i></a> </div>-->
+				
+		
+		</ion-content>
+	</ion-view>
+
+ 

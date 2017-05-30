@@ -1,0 +1,118 @@
+/* Empty. Add your own CSS if you like */
+.button-icon{
+font-size: 25px;
+color:blue ;
+}
+.button.button-light.icon{
+font-size: 190px;
+color:#C30C30;
+}
+
+.icon-bar {
+    width: 0px;
+    background-color: #555;
+	text-align:right;
+}
+
+.icon-bar a {
+    display: block;
+    text-align: center;
+    padding: 0px;
+    transition: all 0.3s ease;
+    font-size: 26px;
+}
+
+.cart-view{
+	color: white;
+}
+
+.cart-view .panel{
+	margin-bottom: 10px;
+}
+
+.cart-view .panel .cart-panel-body {
+	padding:0px;
+	border: 1px solid rgba(255,255,255,.2);
+	height: 75px;
+}
+
+.cart-view .panel .panel-body .item-name{
+	font-family: UnitedSans;
+	font-size: 15px;
+	line-height: 10px;
+	margin-left: 5px;
+}
+
+.panel{
+	min-height: 1px;
+	background-color: rgba(0,0,0,0);
+	margin-bottom: 1.25rem;
+	box-shadow: 0 1px 1px rgba(0,0,0,.05);
+}
+
+.panel-body {
+	position: relative;
+	border-radius: 4px;
+	padding: 15px;
+	height:135px;
+	display:block;
+	width: 90%;
+	margin:auto;
+	background-color: rgba(0,0,0,.3) !important;
+}
+
+.panel-body1 {
+	position: relative;
+	border-radius: 4px;
+	padding: 15px;
+	height:100%;
+	display:block;
+	width: 90%;
+	margin:auto;
+	background-color: rgba(0,0,0,.3) !important;
+}
+
+.photo-slider{
+	position:relative;
+	padding-top:12px;
+	margin-top: 8px !important;
+	height: 220px !important;
+}
+.slide-photo{
+	z-index: -10;
+	display:block;
+	margin:auto;
+	max-width:100%;
+	max-height:250px;
+}
+
+.photo-slider .slider-pager{
+	top: 200px;
+	bottom: initial;
+}
+
+.item-row{
+	height: 19px;
+	text-align: center;
+}
+
+
+.item{
+border-color:rgba(0, 0, 0,0.3);
+background-color:rgba(0, 0, 0, 0);
+}
+
+
+.list .item.item-accordion {
+  line-height: 38px;
+  padding-top: 0;
+  padding-bottom: 0;
+  transition: 0.09s all linear;
+}
+.list .item.item-accordion.ng-hide {
+  line-height: 0px;
+}
+.list .item.item-accordion.ng-hide-add,
+.list .item.item-accordion.ng-hide-remove {
+  display: block !important;
+}

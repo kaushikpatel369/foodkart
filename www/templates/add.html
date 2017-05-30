@@ -1,0 +1,28 @@
+<ion-view view-title="Admin Login" ng-controller="AdminCtrl" style="background: url('img/bg5.jpg'); background-size: 100% 100% !important;">
+	<ion-content>
+		<br/><br/>
+		<div class = "row" align="center">
+			<div class = "col">
+				<div class="animated fadeInLeft">
+					<img src="img\logo5.png" height="170px" width="170px">
+				</div>
+			</div>
+		</div>
+	
+		<div class="list list-inset" style="background:transparent">
+			<div class="item item-input" style="background:transparent">
+				<span><i class="icon ion-person">&nbsp </i>ID</span>&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp
+				<input type="text" ng-model="contact.id" />
+			</div>
+			<div class="item item-input" style="background:transparent">
+				<span><i class="icon ion-unlocked"> </i>Password</span>&nbsp&nbsp&nbsp&nbsp
+				<input type="password" ng-model="contact.pwd"/>
+			</div>
+			<div class="padding">
+				<div class="animated slideInUp">
+					<button class="button button-block button-positive" ng-click="adduser(contact)">Log In</button>
+				</div>
+			</div>
+		</div>
+	</ion-content>
+</ion-view>

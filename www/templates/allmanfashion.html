@@ -1,0 +1,43 @@
+<ion-view view-title="Men Fashion" style="padding-bottom:2px; background-size: cover;">
+	
+		<ion-nav-buttons side="right">
+			<a href="#/mycart" class="button button-clear icon ion-android-cart"></a>		
+		</ion-nav-buttons>
+	
+	   <div class="bar bar-subheader bar-calm">
+				<div class="col col-50" style="text-align:center">
+					<a ng-click="triggerActionSheet()">
+						<strong style="color:white">Filter</strong>
+					</a>
+				</div>
+				<div class="col col-50" style="text-align:center">
+					<a ng-click="">
+						<strong style="color:white">Sort</strong>
+					</a>
+				</div>
+				
+		</div>
+	
+	<ion-content class="has-subheader" style="background: url('img/home3.jpg'); background-size: 100% 100% !important;">
+	
+			<div class="list" ng-repeat="user in contactlist">
+				 <div class="item item-thumbnail-left" style="border-bottom:none;border-top:none">
+							  <img ng-src="{{user.img}}">
+							<div class="row">
+								<div class="col col-100" style="padding-top:0px;padding-left:0px; ">
+									<!--<span style="font-size: 15px;color: #0b8258;">{{user.value}}</span><br>-->
+									<span style="font-size: 15px;color: #8d9118; text-align:right">{{user.name}}</span><br>
+									<span style="font-size: 12px;color: #211CB6;">₹&nbsp{{user.price}}</span><br>
+									<span style="font-size: 12px;color: #8e1325;word-break: keep-all; white-space: normal; padding-top:0px">{{user.desc}}</span>
+								</div>
+							</div>
+				  </div>
+				
+								<div class = "button-bar">
+									<button ng-click="addcart(user)" class="button button-small button-positive">Add to Cart</a></button>
+									<button ng-click="buynow()" class="button button-small button-balanced">Buy Now</a></button>     
+								</div>
+			</div>
+	</ion-content>		
+				
+</ion-view>

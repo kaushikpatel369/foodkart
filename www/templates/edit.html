@@ -1,0 +1,58 @@
+<ion-view view-title="User" ng-controller="EditCtrl">
+	<ion-content style="background: url('img/home3.jpg'); background-size: 100% 100% !important;">
+		<div class="list card has-header">
+			<!--<label class = "item item-input item-select">
+			   <div class = "input-label">
+				  Category
+			   </div>
+				
+			   <select ng-model="contact.value">
+				  <option value="Grocery">Grocery</option>
+				  <option value="Fashion">Fashion</option>
+				  <option value="Electronics">Electronics</option>
+			   </select>-->
+			   
+			   <select ng-init="cat" ng-model="user.bankName" style="width:100%;height:40px">
+							<option selected value="">Select</option>
+							<option ng-repeat="bank in banks" value="{{bank.name}}">{{bank.name}}</option>
+			   </select>
+			   <select ng-init="subcat" ng-model="user.branch" ng-show="user.bankName" style="width:100%;height:40px"><option selected value="">Select</option>
+					<option ng-repeat="branch in getBranches(user.bankName)" value="{{branch.name}}">{{ branch.name }}</option>
+				</select>
+			
+			
+			<div class="item item-input">
+				<input type="text" ng-model="contact.name" focus-me/>
+			</div>
+			<div class="item item-input">
+				<input type="text" ng-model="contact.price"/>
+			</div>
+			<div class="item item-input">
+				<input type="text" ng-model="contact.desc"/>
+			</div>
+			
+
+			
+			<div class="item item-input">
+				<input type="file" ng-model="localFile" id="store-input" accept="image/*" onchange="angular.element(this).scope().localUpload(this)" />
+			</div>
+		
+		
+				<div>
+					<br>&nbsp&nbsp&nbsp&nbsp<label style="font-size:16px;">Offer:</label>&nbsp&nbsp
+					<span>Yes  <input id="first" type="radio" name="content" ng-model="contact.offers" ></span>
+						&nbsp&nbsp&nbsp&nbsp
+					<span>No  <input id="second" type="radio" name="content" ng-model="contact.offers" value="NO"></span><br><br>
+					<div class="item item-input" style="padding-right:12px">
+					<input style="background-color:#eaebed" placeholder="Enter Offer" ng-model="contact.offers" type="text" ng-show="contact.offers !== 'NO'">
+					</div>
+
+				</div>
+				<div class="padding">
+					<button class="button button-block button-positive" ng-click="update(content)">Save</button>
+				</div>
+		</div>
+			
+		
+	</ion-content>
+</ion-view>

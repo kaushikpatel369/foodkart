@@ -1,0 +1,48 @@
+
+	<ion-view title="Register Yourself" style="background: url(img/bg5.jpg); background-size: 100% 100% !important;" >
+	<div class="spacer" style="height: 30px;"></div>
+    <ion-content padding="true" class="padding ">
+	
+			<div class = "row" align="center">
+				<div class = "col">
+					<div class="animated pulse">
+						<img src="img\reg.png" height="130px" width="130px">
+					</div>
+				</div>
+			</div>
+			
+	
+	<div class="spacer" style="height: 10px;"></div>
+     
+		<div class="list list-inset" style="background:transparent">
+		
+					<div class="item item-input" style="background:transparent">
+						<span><i class="icon ion-person">&nbsp </i>Name</span>&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp
+						<input type="text" ng-model="user.name"/>
+					</div>
+					<div class="item item-input" style="background:transparent">
+						<span><i class="icon ion-ios-telephone">&nbsp </i>Mobile</span>&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp
+						<input type="text" ng-model="user.mobile"/>
+					</div>
+					<div class="item item-input" style="background:transparent">
+						<span><i class="icon ion-ios-home">&nbsp </i>Address</span>&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp
+						<input type="text" ng-model="user.address"/>
+					</div>
+					<div class="item item-input" style="background:transparent">
+						<span><i class="icon ion-pin">&nbsp </i>Pin</span>&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp
+						<input type="text" ng-model="user.pin"/>
+					</div>
+					<div class="item item-input" style="background:transparent">
+						<span><i class="icon ion-unlocked"> </i>Password</span>&nbsp&nbsp&nbsp&nbsp&nbsp
+						<input type="password" ng-model="user.pwd"/>
+					</div>
+					<div class="padding">
+						<div class="animated flipInX">
+							<button class="button button-block button-positive" ng-click="adduser(user)">Sign Up</button>
+						</div>
+					</div>
+		</div>
+	 
+    </ion-content>
+	</ion-view>
+
