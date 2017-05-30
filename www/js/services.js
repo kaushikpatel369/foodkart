@@ -72,7 +72,7 @@ angular.module('starter')
 			reject('Login Failed.');
 		  } */  
 		  
-			$http.post('http://localhost:8000/userlogin',user).then(function(response){
+			$http.post('/userlogin',user).then(function(response){
 					console.log(response);
 					console.log(response.data.length);
 					if(response.data.length>0)
@@ -102,7 +102,7 @@ angular.module('starter')
 			reject('Login Failed.');
 		  } */
 		  
-			$http.post('http://localhost:8000/adminlogin',contact).then(function(response){
+			$http.post('/adminlogin',contact).then(function(response){
 					console.log(response);
 					console.log(response.data.length);
 					if(response.data.length>0)
